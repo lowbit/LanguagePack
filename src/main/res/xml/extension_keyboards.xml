@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionKeyboards>
+    <!-- bottom rows -->
+    <ExtensionKeyboard
+        id="32652680-d036-11e6-9598-0800200c9a66"
+        nameResId="@string/extension_kbd_bottom_french"
+        extensionKeyboardResId="@xml/ext_kbd_bottom_row_french"
+        extensionKeyboardType="@integer/extension_keyboard_type_bottom_row"
+        description=""
+        index="1"
+        />
+</ExtensionKeyboards>

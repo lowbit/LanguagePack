@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="words_dict_fr_dicollecte_array">
+        <item>@raw/words_fr_dicollecte_1</item>
+        <item>@raw/words_fr_dicollecte_2</item>
+        <item>@raw/words_fr_dicollecte_3</item>
+    </array>
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AnySoftKeyboard - Pack de langue pour le français</string>
+
+    <string name="azerty_keyboard">AZERTY</string>
+    <string name="azerty_keyboard_description">Clavier AZERTY (France, Belgique)</string>
+    <string name="azerty_accents">AZERTY accents</string>
+    <string name="azerty_accents_description">Clavier AZERTY (France, Belgique) avec 4e rangée de touches pour les accents</string>
+    <string name="azerty_full">AZERTY complet</string>
+    <string name="azerty_full_description">Clavier AZERTY (France, Belgique) 60 %</string>
+
+    <string name="qwerty_keyboard">QWERTY</string>
+    <string name="qwerty_keyboard_description">Clavier QWERTY (canadien multilingue)</string>
+    <string name="qwerty_accents">QWERTY accents</string>
+    <string name="qwerty_accents_description">Clavier QWERTY (canadien multilingue) avec touches dédiées pour les accents</string>
+    <string name="qwerty_full">QWERTY complet</string>
+    <string name="qwerty_full_description">Clavier QWERTY (canadien multilingue) 60 %</string>
+
+    <string name="qwertz_keyboard">QWERTZ</string>
+    <string name="qwertz_keyboard_description">Clavier QWERTZ (Suisse)</string>
+    <string name="qwertz_accents">QWERTZ accents</string>
+    <string name="qwertz_accents_description">Clavier QWERTZ (Suisse) avec touches dédiées pour les accents</string>
+    <string name="qwertz_full">QWERTZ complet</string>
+    <string name="qwertz_full_description">Clavier QWERTZ (Suisse) 60%</string>
+
+    <string name="bepo_keyboard">Bépo</string>
+    <string name="bepo_keyboard_description">Clavier bépo. Touches dédiées aux accents retirées.</string>
+    <string name="bepo_accents">Bépo accents</string>
+    <string name="bepo_accents_description">Clavier bépo</string>
+    <string name="bepo_full">Bépo complet</string>
+    <string name="bepo_full_description">Clavier bépo 60 %</string>
+
+    <string name="extension_kbd_bottom_french">Français optimisé</string>
+
+    <string name="dictionary_en_fr">Anglais-Français</string>
+    <string name="dictionary_fr_aosp">Français</string>
+    <string name="dictionary_fr_dicollecte">Français</string>
+</resources>

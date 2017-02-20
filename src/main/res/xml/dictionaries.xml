@@ -7,7 +7,14 @@
      "dictionaryResourceId" : a reference to the raw resource of the words dictionary
      "autoTextResourceId" : a reference to a common typing mistakes XML.
      -->
-	<Dictionary nameResId="@string/dictionary_name" locale="change_me" id="change_me" type="binary_resource"
-	dictionaryResourceId="@array/words_dict_array" autoTextResourceId="@xml/autotext" 
-	description="change_me"/>	
+	<Dictionary nameResId="@string/dictionary_en_fr" locale="en-fr" id="86d49fb0-ceb6-11e6-9598-0800200c9a66" type="binary_resource"
+		dictionaryResourceId="@array/words_dict_en_fr_array"
+		description="@string/dictionary_en_fr_description" />
+	<!-- autoTextResourceId="@xml/autotext_en_fr"  -->
+	<Dictionary nameResId="@string/dictionary_fr_aosp" locale="fr" id="86d49fb0-ceb6-11e6-9598-0800200c9a66" type="binary_resource"
+		dictionaryResourceId="@array/words_dict_fr_aosp_array" autoTextResourceId="@xml/autotext_fr"
+		description="@string/dictionary_fr_aosp_description" />
+	<Dictionary nameResId="@string/dictionary_fr_dicollecte" locale="fr" id="8f9f4b90-ceb6-11e6-9598-0800200c9a66" type="binary_resource"
+		dictionaryResourceId="@array/words_dict_fr_dicollecte_array" autoTextResourceId="@xml/autotext_fr"
+    	description="@string/dictionary_fr_dicollecte_description" />
 </Dictionaries>

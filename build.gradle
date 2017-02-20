@@ -20,11 +20,11 @@ android {
     buildToolsVersion '25.0.2'
 
     defaultConfig {
-        applicationId "com.anysoftkeyboard.languagepack.languagepack"
+        applicationId "com.anysoftkeyboard.languagepack.french"
         minSdkVersion 7
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "20170217"
     }
 
     signingConfigs {
@@ -47,44 +47,50 @@ android {
     }
 }
 
-task parseTextInputFiles(type: com.anysoftkeyboard.tools.generatewordslist.GenerateWordsListTask) {
-    inputFiles new File(project.getProjectDir(), "dictionary/NY_STATE_ASSEMBLY_TRANSCRIPT_20120621.txt"),
-                //Download the archive from https://dumps.wikimedia.org/other/static_html_dumps/current/simple/
-                new File(project.getProjectDir(), "dictionary/First_English_Civil_War_Wikipedia.htm")
-    outputWordsListFile new File(project.getProjectDir(), "dictionary/words_from_texts.xml")
-}
-
 //another option is to download the words-list from AOSP at https://android.googlesource.com/platform/packages/inputmethods/LatinIME/+/master/dictionaries/
 //make sure that you are using an unzipped file. The XX_wordlist.combined file should be a plain text file.
-task parseAospForEnglishDictionary(type: com.anysoftkeyboard.tools.generatewordslist.GenerateWordsListFromAOSPTask) {
-    inputFile new File(project.getProjectDir(), "dictionary/aosp_en_wordlist.combined")
-    outputWordsListFile new File(project.getProjectDir(), "dictionary/words_from_aosp.xml")
+/*task parseAospForFrenchDictionary(type: com.anysoftkeyboard.tools.generatewordslist.GenerateWordsListFromAOSPTask) {
+    inputFile new File(project.getProjectDir(), "dictionary/fr_aosp_wordlist.combined")
+    outputWordsListFile new File(project.getProjectDir(), "dictionary/words_fr_aosp.xml")
     maxWordsInList 300000
 }
 
 task mergeAllWordLists(type: com.anysoftkeyboard.tools.generatewordslist.MergeWordsListTask) {
-    dependsOn parseTextInputFiles
+    dependsOn parseAospForFrenchDictionary
 
     inputWordsListFiles = [
-            new File(project.getProjectDir(), "dictionary/words_from_texts.xml"),
-            new File(project.getProjectDir(), "dictionary/popular_websites_words.xml"),//website I use most
+            new File(project.getProjectDir(), "dictionary/words_en_ask.xml"),
+            new File(project.getProjectDir(), "dictionary/words_fr_aosp.xml")
     ] as File[]
-    outputWordsListFile new File(project.getProjectDir(), "dictionary/words_merged.xml")
-    maxWordsInList 100000
+    outputWordsListFile new File(project.getProjectDir(), "dictionary/words_en_fr.xml")
+    maxWordsInList 600000
+
+    wordsToDiscard = ['clubbing\'s', 'muggins\'s', 'olefin', 'cs\'s']
 }
 
-task makeDictionary(type: com.anysoftkeyboard.tools.makedictionary.MakeDictionaryTask) {
+task makeEnFrDictionary(type: com.anysoftkeyboard.tools.makedictionary.MakeDictionaryTask) {
     dependsOn mergeAllWordLists
-    inputWordsListFile new File(project.getProjectDir(), "dictionary/words_merged.xml")
+    inputWordsListFile new File(project.getProjectDir(), "dictionary/words_en_fr.xml")
 }
+
+task makeFrAospDictionary(type: com.anysoftkeyboard.tools.makedictionary.MakeDictionaryTask) {
+    dependsOn parseAospForFrenchDictionary
+    inputWordsListFile new File(project.getProjectDir(), "dictionary/words_fr_aosp.xml")
+}
+
+task makeFrDicollecteDictionary(type: com.anysoftkeyboard.tools.makedictionary.MakeDictionaryTask) {
+    inputWordsListFile new File(project.getProjectDir(), "dictionary/words_fr_dicollecte.xml")
+}
+
+task makeDictionaries(dependsOn: ['makeEnFrDictionary', 'makeFrAospDictionary', 'makeFrDicollecteDictionary'])
 
 afterEvaluate { proj ->
     proj.tasks.all { task ->
         if (task.name.startsWith('generate') && task.name.endsWith('BuildConfig')) {
-            task.dependsOn makeDictionary
+            task.dependsOn makeDictionaries
         }
     }
-}
+}*/
 
 dependencies {
     repositories {

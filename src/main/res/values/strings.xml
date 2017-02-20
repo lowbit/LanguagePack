@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AnySoftKeyboard - change_me Language Pack</string>
-    <string name="keyboard_name">change_me keyboard</string>
-    <string name="dictionary_name">change_me</string>
+    <string name="app_name">AnySoftKeyboard - French Language Pack</string>
+
+    <string name="azerty_keyboard">AZERTY</string>
+    <string name="azerty_keyboard_description">AZERTY (France, Belgium) keyboard</string>
+    <string name="azerty_accents">AZERTY accents</string>
+    <string name="azerty_accents_description">AZERTY (France, Belgium) keyboard with a 4th row of keys for accents</string>
+    <string name="azerty_full">AZERTY full</string>
+    <string name="azerty_full_description">AZERTY (France, Belgium) 60% keyboard</string>
+
+    <string name="qwerty_keyboard">QWERTY</string>
+    <string name="qwerty_keyboard_description">QWERTY (multilingual canadian) keyboard</string>
+    <string name="qwerty_accents">QWERTY accents</string>
+    <string name="qwerty_accents_description">QWERTY (multilingual canadian) keyboard with dedicated keys for accents</string>
+    <string name="qwerty_full">QWERTY full</string>
+    <string name="qwerty_full_description">QWERTY (multilingual canadian) 60% keyboard</string>
+
+    <string name="qwertz_keyboard">QWERTZ</string>
+    <string name="qwertz_keyboard_description">QWERTZ (Switzerland) keyboard</string>
+    <string name="qwertz_accents">QWERTZ accents</string>
+    <string name="qwertz_accents_description">QWERTZ (Switzerland) keyboard with dedicated keys for accents</string>
+    <string name="qwertz_full">QWERTZ full</string>
+    <string name="qwertz_full_description">QWERTZ (Switzerland) 60% keyboard</string>
+
+    <string name="bepo_keyboard">Bépo</string>
+    <string name="bepo_keyboard_description">Bépo keyboard. Keys for accents were removed in this layout.</string>
+    <string name="bepo_accents">Bépo accents</string>
+    <string name="bepo_accents_description">Bépo keyboard</string>
+    <string name="bepo_full">Bépo full</string>
+    <string name="bepo_full_description">Bépo 60% keyboard</string>
+
+    <string name="extension_kbd_bottom_french">French optimized</string>
+
+    <string name="dictionary_en_fr">English-French</string>
+    <string name="dictionary_en_fr_description">AnySoftKeyboard + AOSP version 2014-10-31</string>
+    <string name="dictionary_fr_aosp">French</string>
+    <string name="dictionary_fr_aosp_description">AOSP version 2014-10-31</string>
+    <string name="dictionary_fr_dicollecte">French</string>
+    <string name="dictionary_fr_dicollecte_description">Dicollecte version 6.0.2</string>
 </resources>
