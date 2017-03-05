@@ -33,6 +33,9 @@
     <string name="extension_kbd_bottom_french">Français optimisé</string>
 
     <string name="dictionary_en_fr">Anglais-Français</string>
+    <string name="dictionary_en_fr_description">AnySoftKeyboard + AOSP version 2014-10-31</string>
     <string name="dictionary_fr_aosp">Français</string>
+    <string name="dictionary_fr_aosp_description">AOSP version 2014-10-31</string>
     <string name="dictionary_fr_dicollecte">Français</string>
+    <string name="dictionary_fr_dicollecte_description">Dicollecte version 6.0.2</string>
 </resources>
