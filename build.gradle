@@ -11,14 +11,13 @@ System.setProperty("file.encoding", "UTF-8")
 
 buildscript {
     repositories {
+        google()
         jcenter()
         mavenCentral()
         maven { url 'https://jitpack.io' }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-
         classpath 'com.github.AnySoftKeyboard.AnySoftKeyboardTools:makedictionary:287fe7812294918636359e4d28dbcbc931f3dab8'
         classpath 'com.github.AnySoftKeyboard.AnySoftKeyboardTools:generatewordslist:287fe7812294918636359e4d28dbcbc931f3dab8'
         //classpath files('english_dictionary/generatewordslist-1.0-SNAPSHOT.jar')
@@ -54,7 +53,7 @@ android {
     buildToolsVersion '26.0.0'
 
     defaultConfig {
-        applicationId "com.anysoftkeyboard.languagepack.languagepack"
+        applicationId "com.anysoftkeyboard.languagepack.bosnian"
         minSdkVersion 7
         targetSdkVersion 26
         versionName versionData.versionName
@@ -94,21 +93,22 @@ play {
     uploadImages = true
 }
 
-task parseTextInputFiles(type: GenerateWordsListTask) {
+/*task parseTextInputFiles(type: GenerateWordsListTask) {
     inputFiles new File(project.getProjectDir(), "dictionary/NY_STATE_ASSEMBLY_TRANSCRIPT_20120621.txt"),
                 //Download the archive from https://dumps.wikimedia.org/other/static_html_dumps/current/simple/
                 new File(project.getProjectDir(), "dictionary/First_English_Civil_War_Wikipedia.htm")
     outputWordsListFile new File(project.getProjectDir(), "dictionary/words_from_texts.xml")
 }
+*/
 
 //another option is to download the words-list from AOSP at https://android.googlesource.com/platform/packages/inputmethods/LatinIME/+/master/dictionaries/
 //make sure that you are using an unzipped file. The XX_wordlist.combined file should be a plain text file.
-task parseAospForEnglishDictionary(type: GenerateWordsListFromAOSPTask) {
-    inputFile new File(project.getProjectDir(), "dictionary/aosp_en_wordlist.combined")
+task parseAospForBosnianDictionary(type: GenerateWordsListFromAOSPTask) {
+    inputFile new File(project.getProjectDir(), "dictionary/hr_wordlist.combined")
     outputWordsListFile new File(project.getProjectDir(), "dictionary/words_from_aosp.xml")
     maxWordsInList 300000
 }
-
+/*
 task mergeAllWordLists(type: MergeWordsListTask) {
     dependsOn parseTextInputFiles
 
@@ -123,6 +123,11 @@ task mergeAllWordLists(type: MergeWordsListTask) {
 task makeDictionary(type: MakeDictionaryTask) {
     dependsOn mergeAllWordLists
     inputWordsListFile new File(project.getProjectDir(), "dictionary/words_merged.xml")
+}*/
+
+task makeDictionary(type: MakeDictionaryTask) {
+    dependsOn parseAospForBosnianDictionary
+    inputWordsListFile new File(project.getProjectDir(), "dictionary/words_from_aosp.xml")
 }
 
 afterEvaluate { proj ->
