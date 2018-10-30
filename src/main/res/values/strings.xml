@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AnySoftKeyboard - BOSNIAN Language Pack</string>
-    <string name="keyboard_name1">Bosnian Qwerty</string>
     <string name="dictionary_name">Bosnian</string>
-    <string name="uuid1">7a2f8470-d79a-11e8-b568-0800200c9a66</string>
-    <string name="keyboard_desc1">Bosnian Keyboard QWERTY</string>
+    <string name="keyboard_name1">Bosnian Qwerty</string>
     <string name="keyboard_name2">Bosnian Qwertz</string>
+    <string name="uuid1">7a2f8470-d79a-11e8-b568-0800200c9a66</string>
     <string name="uuid2">082279e0-d79b-11e8-b568-0800200c9a66</string>
+    <string name="keyboard_desc1">Bosnian Keyboard QWERTY</string>
     <string name="keyboard_desc2">Bosnian Keyboard QWERTZ</string>
 </resources>
